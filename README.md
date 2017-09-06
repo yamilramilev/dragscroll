@@ -16,13 +16,13 @@ Download the and unpack
 or install it using [Bower](http://bower.io/):
 
 ```sh
-$ bower install dragscroll
+$ bower install dragscroll-yamilramilev
 ```
 
 or npm:
 
 ```sh
-$ npm install dragscroll
+$ npm install dragscroll-yamilramilev
 ```
 
 Load the `dragscroll.js` in a preferable way (that is an UMD module):
