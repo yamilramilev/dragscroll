@@ -12,7 +12,7 @@ is written in vanilla JavaScript (which means it works anywhere).
 
 
 Download the and unpack
-[distribution](https://github.com/asvd/dragscroll/releases/download/v0.0.8/dragscroll-0.0.8.tar.gz),
+[distribution](https://github.com/yamilramilev/dragscroll/releases/download/v0.0.9/dragscroll-0.0.9.tar.gz),
 or install it using [Bower](http://bower.io/):
 
 ```sh
@@ -49,13 +49,13 @@ the users (or even `cursor: grab;` in case the content is not a text).
 If you add or remove the `dragscroll` class dynamically, invoke
 `dragscroll.reset()` to update the listeners.
 
+Add the `noscrolling` attribute to element for disable drag-scrolling.
+ 
+Add the `noscrolly` attribute to element for drag-scrolling only horizontally. 
+
 You can also add the `nochilddrag` attribute to a scrollable element,
 which will only enable drag-scrolling for an element itself, but not
 for its subchildren. This can be usefull, if you want to enable the
 scrolling the area by dragging its empty space, but keep the
 opportunity to select the text (see
 [example](http://asvd.github.io/jailed/demos/web/process/)).
-
--
-
-Follow me on twitter: https://twitter.com/asvd0

@@ -1,9 +1,9 @@
 /**
  * @fileoverview dragscroll - scroll area by dragging
  * @version 0.0.8
- * 
+ *
  * @license MIT, see http://github.com/asvd/dragscroll
- * @copyright 2015 asvd <heliosframework@gmail.com> 
+ * @copyright 2015 asvd <heliosframework@gmail.com>
  */
 
 
@@ -43,16 +43,17 @@
                 (cont = el.container || el)[addEventListener](
                     mousedown,
                     cont.md = function(e) {
-                        if (!el.hasAttribute('nochilddrag') ||
-                            _document.elementFromPoint(
-                                e.pageX, e.pageY
-                            ) == cont
+                        if (!e.target.hasAttribute('noscrolling') &&
+                            (!el.hasAttribute('nochilddrag') ||
+                                _document.elementFromPoint(
+                                    e.pageX, e.pageY
+                                ) == cont)
                         ) {
                             pushed = 1;
                             lastClientX = e.clientX;
                             lastClientY = e.clientY;
 
-                            e.preventDefault();
+                            // e.preventDefault(); //НАХ ЭТОТ КУСОК
                         }
                     }, 0
                 );
@@ -67,20 +68,22 @@
                         if (pushed) {
                             (scroller = el.scroller||el).scrollLeft -=
                                 newScrollX = (- lastClientX + (lastClientX=e.clientX));
-                            scroller.scrollTop -=
-                                newScrollY = (- lastClientY + (lastClientY=e.clientY));
-                            if (el == _document.body) {
-                                (scroller = _document.documentElement).scrollLeft -= newScrollX;
-                                scroller.scrollTop -= newScrollY;
+                            if (!el.hasAttribute('noscrolly')) {
+                                scroller.scrollTop -=
+                                    newScrollY = (- lastClientY + (lastClientY=e.clientY));
+                                if (el == _document.body) {
+                                    (scroller = _document.documentElement).scrollLeft -= newScrollX;
+                                    scroller.scrollTop -= newScrollY;
+                                }
                             }
                         }
                     }, 0
                 );
-             })(dragged[i++]);
+            })(dragged[i++]);
         }
     }
 
-      
+
     if (_document.readyState == 'complete') {
         reset();
     } else {
@@ -89,4 +92,3 @@
 
     exports.reset = reset;
 }));
-

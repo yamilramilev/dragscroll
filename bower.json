@@ -1,9 +1,9 @@
 {
-  "name": "dragscroll",
-  "version": "0.0.8",
-  "homepage": "https://github.com/asvd/dragscroll",
+  "name": "dragscroll-yamilramilev",
+  "version": "0.0.9",
+  "homepage": "https://github.com/yamilramilev/dragscroll",
   "authors": [
-    "Dmitry Prokashev <heliosframework@gmail.com>"
+    "Yamil Ramilev <yamilramilev@gmail.com>"
   ],
   "description": "Tiny library for drag-n-drop scrolling style",
   "main": "dragscroll.js",
