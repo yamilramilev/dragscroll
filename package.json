@@ -2,7 +2,7 @@
   "author": "Yamil Ramilev <yamilramilev@gmail.com>",
   "name": "dragscroll-yamilramilev",
   "description": "Tiny library for drag-n-drop scrolling style",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "keywords": [
     "dragscroll",
     "scroll",
